@@ -1,0 +1,418 @@
+/*Search Box*/
+$radius: 45px;
+$textfieldborder: #DFE1E5;
+$over: 10px;
+$insetover: 10px;
+$steady: 5px;
+$searchBoxShadowColor: #cecece;
+$W: 500px;
+/**/
+
+/*Search Button*/
+$buttonradius: 5px;
+$buttonheight: 35px;
+$buttonwidth: 200px;
+$buttonover: 1px;
+$buttonSteadyColor: #F8F9FA;
+
+$buttonHoverBorderColor: #DADCE0;
+$buttonActiveBordercolor: #4285F4;
+/**/
+
+form{
+    margin-top: 0px;
+}
+
+#title{    
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 100px;
+    margin-top: 150px;
+    margin-bottom: 50px;  
+    font-family: Arial, Helvetica, sans-serif;
+    G0{
+        color: #4080EB;
+    }
+    O0{
+        color: #E14032;
+    }
+    O1{
+        color: #F1B508;
+    }
+    G1{
+        color: #4080EB;
+    }
+    L0{
+        color: #31A34F;
+    }
+    E0{
+        color: #E14032;
+    }
+}
+
+#smalltitle{
+    display: flex;
+    justify-content: left;
+    float: left;
+    margin-right: auto;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px; 
+    a{
+        text-decoration: none;
+    }
+    G0{
+        color: #4080EB;
+    }
+    O0{
+        color: #E14032;
+    }
+    O1{
+        color: #F1B508;
+    }
+    G1{
+        color: #4080EB;
+    }
+    L0{
+        color: #31A34F;
+    }
+    E0{
+        color: #E14032;
+    }
+}
+
+.SearchBox{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    input[type=text]{
+        height: $radius;
+        width: $W;
+        border-radius: $radius;
+        border: 1px solid $textfieldborder;
+        padding: 0px $radius;
+    }
+    input:focus[type=text]{
+        border: 1px;
+        outline: none !important;
+        background-color: white;
+        -webkit-box-shadow: 0 0 $over $searchBoxShadowColor;
+        box-shadow: 0 0 $over $searchBoxShadowColor;
+    }
+    input:hover[type=text]{        
+        -webkit-box-shadow: 0 0 $over $searchBoxShadowColor;
+        box-shadow: 0 0 $over $searchBoxShadowColor;
+    }
+    i {
+        position: absolute;
+        margin-right: $W + $radius;
+    }
+    iconright {
+        position: absolute;
+        margin-left: $W + $radius;
+        div{
+            margin-left: -$radius * 2;
+        }
+    }
+
+    input[type=submit]{
+        border-radius: $buttonradius;
+        font-size: 14px;
+        height: $buttonheight;
+        border-width: 0;
+        background-color: $buttonSteadyColor;
+        margin: 20px 5px;
+        padding: 0px 15px;
+        outline: none !important;
+    }
+    input[type=submit]:hover{        
+        border: 1px solid $buttonHoverBorderColor;
+        box-shadow: 0 $buttonover $searchBoxShadowColor;
+    }
+    input[type=submit]:active{
+        border: 1px solid $buttonActiveBordercolor;
+    }
+    input[type=submit]:focus{
+        border: 1px solid $buttonActiveBordercolor;
+    }
+    
+}
+
+.AdvancedSearchBox{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;   
+    h2{
+        font-weight: lighter;
+        font-size: 20px;
+        color: #DD3025;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    h3{
+        font-weight: lighter;
+        font-size: 17px;
+        color: #333333;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    hr{
+        border: 1px solid #EBEBEB;
+    }
+    div{
+        margin-left: 20px;
+        margin-right: 100px; 
+        label{
+            display: inline-block;
+            width: 200px;
+            padding: 12px 0;
+        }
+
+        input[type=text]{
+            height: 27px;
+            width: 300px;
+            margin-right: 0;
+            border: 1px solid #D9D9D9;
+            padding: 0px 8px;
+            float: right;
+        }
+        input:focus-within[type=text]{
+            outline: none !important;
+            border: 1px solid #4D90FE;
+            -webkit-box-shadow: 0 0 2px 1px $searchBoxShadowColor;
+            box-shadow: inset 0 0 2px 1px $searchBoxShadowColor;
+        }
+
+        $AdBtnColor: #4B8DF9;
+        $AdBtnBorderColor: #3079ED;
+        $AdBtnHoverBorderColor: #2F5BB7;
+        $AdBtnHoverShadow: #0000002f;
+        input[type=submit]{
+            float: right;
+            color: white;
+            border-radius: 2px;
+            font-size: 11px;
+            font-weight: bold;
+            height: 27px;
+            border: 1px solid $AdBtnBorderColor;
+            background-color: $AdBtnColor;
+            margin: 15px 0px;
+            padding: 0px 15px;
+            outline: none !important;
+        }
+        input[type=submit]:hover{        
+            border: 1px solid $AdBtnHoverBorderColor;
+            -webkit-box-shadow: 0 0 16px $AdBtnHoverShadow;
+            box-shadow: inset 0 0 16px $AdBtnHoverShadow;
+        }
+    }
+}
+
+.Languages{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    a{
+        margin-left: 5px;
+        justify-content: baseline;
+    }
+}
+
+.PageLinks{
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: middle;
+    margin: 10px;
+    a{  
+        width: auto;
+        color: #212121;
+        float: right;
+        padding: 2px;
+        height: 32px;
+        text-align: center;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    a:hover
+    {
+        text-decoration-line: underline;
+    }
+
+    button{
+        outline: none;
+        background-color: white;
+        border: 0;
+        border-radius: 50%;
+        a{
+            padding: 0;
+            margin-left: 0px;
+        }
+    }
+
+    .AlignToLeft{
+        margin-right: auto; vertical-align: middle;
+        margin-top: -15px;
+    }
+
+    .linkSpace{
+        margin-right: 15px;
+    }
+
+    .logo{
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        overflow: hidden;
+    }
+
+    .logo:hover{
+        border: 1px solid $buttonover;
+        -webkit-box-shadow: 0 0 7px gray;
+        box-shadow: 0 0 7px gray;
+        // background-color: #F0F0F0;
+    }
+}
+
+.PageFooter{
+    background-color: #F2F2F2;
+    color: #7F8488;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:auto;
+    width:100%;
+    div{
+        width: 100%;
+        height: 40px;
+        border: 1px solid #DADCE0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding-left: 30px;
+        a{
+            color: #7F8488;
+            display: inline-block;
+            padding: 10px 0px;
+            padding-right: 15px;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+        }
+        a:hover
+        {
+            text-decoration-line: underline;
+        }
+        right{
+            float: right;
+            margin-right: 50px;
+        }
+    }
+    p{
+        padding: 0px;
+    }
+}
+
+select{
+    width: 200px;
+    height: 30px;
+}
+
+.DockStyle{
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  #myInput {
+    background-image: url('images/Search.svg');
+    background-position: 0px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;
+  }
+
+  .Title{
+      color: #21a180;
+      display: block;
+      h1{
+          font-size: 300%;
+          margin-bottom: 5px;
+          padding: 0px;
+      }
+      img{
+          width: 50px;
+          height: 50px;
+          position: absolute;
+      }
+  }
+
+.PersonDetails{
+    list-style-type: none;
+    text-align: left;
+    li{
+        border-radius: 10px;
+        padding: 5%;
+        // background-color: rgb(0, 119, 255)
+        background-color: rgb(214, 214, 214)
+    }
+
+    div{
+        display: flex;
+        .dp{
+            width: 15%;
+            img{
+                width: 50px;
+                height: 50px;
+                margin-top: 0;
+            }
+        }
+        .info{
+            position: relative;
+            display: inline;
+            width: 95%;
+            h1{
+                display: flex;
+                justify-content: flex-start;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+                margin-left: 25px;
+            }
+            li{
+                list-style-type: disc;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    .block{
+        margin-bottom: 5px;
+    }
+}

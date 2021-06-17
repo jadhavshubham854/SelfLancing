@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Self Lancing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+        <div>
+            <div class="Title">
+                <h1>Self Lancing</h1>
+                <a href="">
+                    <img src="images/SiFi Life.png">
+                </a>
+            </div>
+            <div class="PageLinks">
+                <a href="">About</a>
+            </div>
+        </div>
+        <hr>
+        <div class="DockStyle">
+            <form style="width: 30%;">
+                <input type="text" id="myInput" onkeyup="myFunction()" 
+                    placeholder="Search" title="Type in a name">
+                <ul id="myUL">
+                    <li><a href="">Plumber</a></li>
+                    <li><a href="">Electrician</a></li>
+                    <li><a href="">Painting</a></li>
+                    <li><a href="">Carpainter</a></li>
+                    <li><a href="">Maintainance</a></li>
+                </ul>
+            </form>
+            <div style="width: 70%;">
+                <ul id="details" class="PersonDetails">
+                    <li class="block">
+                        <div>
+                            <div class="dp">
+                                <img src="images/people.svg">
+                            </div>
+                            <div class="info">
+                                <h1>Shubham Jadhav</h1>
+                                <ul>
+                                    <li>Work: Web Developing, Desktop Application, 
+                                        Mobile Development
+                                    </li>
+                                    <li>Experience: 3 year</li>
+                                    <li>Address: Shivaji Nagar, Ratnagiri</li>
+                                    <li>Contact: +91 9975979075</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="block">
+                        <div>
+                            <div class="dp">
+                                <img src="images/people.svg">
+                            </div>
+                            <div class="info">
+                                <h1>Sanjay Mane</h1>
+                                <ul>
+                                    <li>Work: Plumber</li>
+                                    <li>Experience: 8 year</li>
+                                    <li>Address: Malnaka, Ratnagiri</li>
+                                    <li>Contact: +91 9422678520</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="block">
+                        <div>
+                            <div class="dp">
+                                <img src="images/people.svg">
+                            </div>
+                            <div class="info">
+                                <h1>Kamble</h1>
+                                <ul>
+                                    <li>Work: Electrician</li>
+                                    <li>Experience: 10.5 year</li>
+                                    <li>Address: JK Files, Ratnagiri</li>
+                                    <li>Contact: +91 9975479740</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                // li = ul.getElementsByTagName("a");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+            function blockFilter(filter){
+                switch(filter){
+                    case "Plumber":
+                        id=document.getElementById("mycount");
+                        id.innerText=2;
+                }
+                // id=document.getElementById("mycount");
+                // id.innerText=2;
+            }
+        </script>
+    </body>
+</html>
